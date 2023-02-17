@@ -1,0 +1,13 @@
+nome = input("Digite o seu nome: ")
+faculdade = input("Digite a sua faculdade: ")
+qtdDeAlunos = int(input("Digite a quantidade de alunos na faculdade: "))
+mediaGasto = float(input("Digite o quanto os alunos gastam mensalmente: "))
+
+print(nome + "estuda em " + faculdade)
+print("Nessa faculdade, tem " + str(qtdDeAlunos) + " alunos")
+print("Cada aluno gasta em média " + str(mediaGasto) + " reais")
+print("==============Verifique os tipos de dados abaixo:==============")
+print("O tipo de dado da variável [nome] é: ", type(nome))
+print("O tipo de dado da variável [faculdade] é: ", type(faculdade))
+print("O tipo de dado da variável [qtdDeAlunos] é: ", type(qtdDeAlunos))
+print("O tipo de dado da variável [mediaGasto] é: ", type(mediaGasto))
