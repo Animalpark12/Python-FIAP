@@ -40,7 +40,7 @@ for elemento in inventario:
     print("Número serial: ", elemento[2])
     print("Departamento.: ", elemento[3])
 
-valores=[]
+valores = []
 for elemento in inventario:
   valores.append(elemento[1])
 if len(valores)>0:
