@@ -17,6 +17,7 @@ def inserir(dicionario):
     chave = input("Digite o login: ").upper()
     dicionario[chave] = [input("Digite o nome: ").upper(),
                          input("Digite a última data de acesso: "),
+                         input("Digite a hora do login: "),
                          input("Qual a última estação acessada: ").upper()]
 
 
