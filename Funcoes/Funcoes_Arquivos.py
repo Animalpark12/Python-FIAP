@@ -10,7 +10,7 @@ def chamarMenu():
 def registrar(dicionario):
     resposta = "S"
     while resposta == "S":
-        numeroPatrimonial = int(input("Digite o número patrimonial: "))
+        numeroPatrimonial = input("Digite o número patrimonial: ")
         dicionario[numeroPatrimonial] = [input("Digite a data de atualização: "),
                                          input("Digite a descrição: "),
                                          input("Digite o departamento: ").upper()]
@@ -20,8 +20,10 @@ def registrar(dicionario):
 def persistir(dicionario):
     with open("inventario.csv", "a") as inv:
         for chave, valor in dicionario.items():
-            inv.write(str(chave) + ";" + valor[0] + ";" + valor[1] + ";" + valor[2] + ";")
+            # LEMBRETE: se tiver mexendo com planilha, colocar o \n para poder pular uma linha no final
+            inv.write(chave + ";" + valor[0] + ";" + valor[1] + ";" + valor[2] + "\n")
     print("Persistido com sucesso!")
+
 
 def exibir():
     with open("inventario.csv", "r") as inv:
