@@ -18,12 +18,12 @@ def registrar(dicionario):
 
 
 def persistir(dicionario):
-    with open("inventarios.csv", "a") as inv:
+    with open("inventario.csv", "a") as inv:
         for chave, valor in dicionario.items():
             inv.write(str(chave) + ";" + valor[0] + ";" + valor[1] + ";" + valor[2] + ";")
-    return "Persistido com sucesso"
+    print("Persistido com sucesso!")
 
 def exibir():
-    with open("inventarios.csv", "r") as inv:
+    with open("inventario.csv", "r") as inv:
         linhas = inv.readlines()
     return linhas
