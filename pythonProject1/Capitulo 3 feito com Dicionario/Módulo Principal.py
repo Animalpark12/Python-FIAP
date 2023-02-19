@@ -1,4 +1,4 @@
-from Capitulo3_Funções.Funcoes import *
+from Funcoes.Funcoes_Dicionário import *
 
 material = {}
 opcao = perguntar()
