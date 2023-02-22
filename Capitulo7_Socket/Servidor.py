@@ -13,8 +13,8 @@ while True:  # Aguarda a chamada de um cliente
     print("Conectado com: ", cliente)
     while True:  # Envia solicitação q pode ser transmitida até 1024 bytes
         msgRecebida = str(con.recv(1024))
-        print("Recebemos: ", msgRecebida)
-        msgEnviada = b'Ola cliente'
+        print("Recebemos: ", str(msgRecebida)[2:-1])
+        msgEnviada = bytes(input("Sua resposta: "), 'utf-8')
         con.send(msgEnviada)
         break
     con.close()
