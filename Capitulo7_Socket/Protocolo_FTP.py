@@ -6,8 +6,11 @@ usuario = input("Digite o usuário: ")
 senha = input("Digite a sua senha: ")
 ftp.login(usuario, senha)
 
-print("Diretório atual de trabalho: ", ftp.pwd())  # PWD retorna o endereço atual de trabalho
-ftp.cwd('pub')  # Navegar entre os diretórios
-print("Diretório corrente: ", ftp.pwd())
-print(ftp.retrlines('LIST'))
+resposta = "S"
+while resposta == "S":
+    print("Diretório atual de trabalho: ", ftp.pwd())  # PWD retorna o endereço atual de trabalho
+    print(ftp.retrlines('LIST'))
+    ftp.cwd(input("Digite o diretório que deseja entrar: "))  # Navegar entre os diretórios
+    print("Diretório corrente: ", ftp.pwd())
+    resposta = input("Para continuar, digite <S>: ").upper()
 ftp.quit()
